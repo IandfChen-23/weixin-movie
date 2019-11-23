@@ -1,0 +1,21 @@
+/* pages/weekly/index.wxss */
+.desc{
+  font-size:28rpx;
+padding:26rpx 0;
+
+}
+swiper{
+  width: 100%;
+  height: 90vh;
+}
+swiper image{
+  width: 100%;
+  height: 400rpx;
+}
+.movietext{
+display:flex;
+flex-direction:column;
+align-items:center;
+padding:30rpx;
+
+}

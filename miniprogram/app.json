@@ -1,0 +1,30 @@
+{
+  "pages": [
+    "pages/weekly/index",
+    "pages/about/index",
+    "pages/movie/index"
+  ],
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/weekly/index",
+        "text": "每周电影",
+        "iconPath":"image/movie.png",
+        "selectedIconPath": "image/moviesel.png"
+      },
+      {
+        "pagePath": "pages/about/index",
+        "text": "关于",
+        "iconPath": "image/about_line.png",
+        "selectedIconPath": "image/selectabout.png"
+      }
+    ]
+  },
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#F6F6F6",
+    "navigationBarTitleText": "QuickStart",
+    "navigationBarTextStyle": "black"
+  }
+}

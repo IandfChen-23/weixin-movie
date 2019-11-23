@@ -1,0 +1,16 @@
+<view class='container'>
+  <swiper indicator-dots='true' indicator-color='gray' indicator-active-color='black' autoplay='true' >
+   <view class='container' > 
+ <swiper-item wx:for='{{thisWeekMovie}}' >
+  
+   <image src='{{item.img}}' mode='scrollToFit'></image>
+   <view class='movietext' > 
+   <text>{{item.title}}</text>
+   <text class='desc'>详细介绍：{{item.desc}}</text>
+   <text style='font-size:50rpx;color:red;' wx:if='{{item.isHighlyRecom}}' >     强烈推荐</text>
+  </view>
+
+ </swiper-item>
+  </view>
+  </swiper>
+</view>

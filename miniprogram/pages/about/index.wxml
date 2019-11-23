@@ -1,0 +1,7 @@
+<!--index.wxml-->
+<view class="container">
+  <image src='../../image/joker.jpg' class='aboutImg'></image>
+  <text class='title'>电影周周看</text>
+  <text> 每周电影推荐</text>
+  <text class='time'>{{time}}</text>
+</view>
