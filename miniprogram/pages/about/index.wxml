@@ -1,7 +1,6 @@
 <!--index.wxml-->
 <view class="container">
-  <image src='../../image/joker.jpg' class='aboutImg'></image>
-  <text class='title'>电影周周看</text>
-  <text> 每周电影推荐</text>
-  <text class='time'>{{time}}</text>
+<open-data type="userAvatarUrl" style='border-radius:50%'></open-data>
+<open-data type="userNickName" lang="zh_CN"></open-data>
+<text class='time'>{{time}}</text>
 </view>

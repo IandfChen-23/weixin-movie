@@ -5,16 +5,46 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+     movie:null
   },
-
+  toWatch:function(options){
+    console.log(options);
+  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+     wx.showNavigationBarLoading()
+     var that=this
+     wx.request({
+       url: 'https://api.douban.com/v2/movie/subject/'+
+       options.id+'?apikey=0df993c66c0c636e29ecbb5344252a4a',
+       method:'GET',
+       header:{
+         'content-type':'json'
+       },
+       success:function(res){
+         console.log(res.data);
+         if(res.statusCode==200){
+           that.setData({
+             movie: res.data
+           })
+         }
+         wx.hideNavigationBarLoading()
+         wx.setNavigationBarTitle({
+           title: res.data.title,
+         })
+       },
+       fail:function(res){
 
+       }
+     })
   },
-
+  onShareAppMessage:function(){
+    return {
+      title:'向你推荐'
+    }
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

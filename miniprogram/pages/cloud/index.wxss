@@ -1,0 +1,17 @@
+/**index.wxss**/
+
+
+
+.aboutImg {
+  width: 500rpx;
+  height: 500rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.title{
+  font-size: 60rpx;
+}
+.time{
+  color: gray;
+}

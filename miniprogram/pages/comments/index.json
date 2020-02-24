@@ -1,0 +1,10 @@
+{
+  "usingComponents": {
+    "van-field": "../../miniprogram_npm/vant-weapp/field/index",
+    "van-rate": "../../miniprogram_npm/vant-weapp/rate/index"
+  },
+  "navigationBarTextStyle": "black",
+  "navigationBarTitleText": " ",
+  "backgroundColor": "#eeeeee",
+  "backgroundTextStyle": "light"
+}

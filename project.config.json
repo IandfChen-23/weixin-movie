@@ -6,7 +6,9 @@
 		"es6": true,
 		"postcss": true,
 		"minified": true,
-		"newFeature": true
+		"newFeature": true,
+		"autoAudits": false,
+		"nodeModules": true
 	},
 	"appid": "wxb21d1fcca7cba583",
 	"projectname": "movieweekly",

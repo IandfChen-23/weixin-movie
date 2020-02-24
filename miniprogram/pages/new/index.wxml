@@ -1,0 +1,25 @@
+<!--pages/movie/index.wxml-->
+<view  wx:for='{{movieList}}'>
+  <view  class="movie-container"  wx:key='{{item.id}}'>
+    <view class="left">
+      <image src='{{item.images.small}}' mode='scaleToFill'></image>
+    </view>
+    <view class="right">
+      <text class='title'>{{item.title}}</text>
+      <text>导演：{{item.directors[0].name}}</text>
+      <view style='flex-direction:row'>主演:
+        <text wx:for='{{item.casts}}'>{{item.name}}/</text>
+      </view>
+      <view>类型：
+        <text wx:for='{{item.genres}}'>{{item}}/</text>
+      </view>
+      <text>上映日期：{{item.year}}</text>
+      <text>时长：{{item.durations[0]}}</text>
+      <text style='color:red;'>豆瓣评分：{{item.rating.average}}</text>
+      <view>
+      <button type='primary' size='mini' bindtap='toCommnets' data-movie-id='{{item.id}}'>评价</button>
+      </view>
+    </view>
+  </view>
+
+</view>

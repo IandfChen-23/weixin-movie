@@ -1,0 +1,26 @@
+<!--pages/movie/index.wxml-->
+<view class="movie-container">
+  <view class="left">
+    <image src='{{movie.images.small}}' mode='scaleToFill'></image>
+  </view>
+ <view class="right">
+    <text>导演：{{movie.writers[0].name}}</text>
+    <view style='flex-direction:row'>主演:
+      <text wx:for='{{movie.casts}}'>{{item.name}}/</text>
+    </view>
+    <view>类型：
+      <text wx:for='{{movie.genres}}'>{{item}}</text>
+    </view>
+    <text>上映日期：{{movie.year}}</text>
+    <text style='color:red;font-size:34rpx;'>豆瓣评分：{{movie.rating.average}}</text>
+  </view>
+</view>
+<view style='padding:20rpx'>
+  <van-cell-group>
+    <van-field value="{{ commnets }}" placeholder="写点评价吧" border="{{ false }}" bind:change="onChange" />
+  </van-cell-group>
+  <van-rate value="{{ score }}" bind:change="onScoreChange" />
+  <van-button style='padding:40rpx 20rpx 20rpx 0rpx' type="warning">提交评价</van-button>
+
+  <van-button style='padding:40rpx' type="danger">上传图片</van-button>
+</view>

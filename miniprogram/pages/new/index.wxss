@@ -1,0 +1,25 @@
+/* pages/movie/index.wxss */
+.movie-container{
+  display: flex;
+  flex-direction: row;
+}
+.title{
+  font-size: 44rpx;
+}
+.left{
+  flex: 1;
+  width: 50%;
+}
+.left image{
+  width:375rpx;
+}
+.right{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  font-size: 30rpx;
+  padding: 15rpx;
+}
+.summary{
+  font-size: 28rpx;
+}

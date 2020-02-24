@@ -1,7 +1,7 @@
-<view class='container'>
-  <swiper indicator-dots='true' indicator-color='gray' indicator-active-color='black' autoplay='true' >
+<view class='container' >
+  <swiper indicator-dots='true' indicator-color='gray' indicator-active-color='black' autoplay='true' current='1' >
    <view class='container' > 
- <swiper-item wx:for='{{thisWeekMovie}}' >
+ <swiper-item wx:for='{{thisWeekMovie}}'  bindtap='toMovies' data-movie-id='{{item.id}}'>
   
    <image src='{{item.img}}' mode='scrollToFit'></image>
    <view class='movietext' > 

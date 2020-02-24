@@ -1,2 +1,22 @@
 <!--pages/movie/index.wxml-->
-<text>pages/movie/index.wxml</text>
+<view class="movie-container">
+  <view class="left">
+    <image src='{{movie.images.small}}' mode='scaleToFill'></image>
+  </view>
+  <view class="right">
+    <text>导演：{{movie.writers[0].name}}</text>
+    <view style='flex-direction:row'>主演:
+      <text wx:for='{{movie.casts}}'>{{item.name}}/</text>
+    </view>
+    <view>类型：
+      <text wx:for='{{movie.genres}}'>{{item}}</text>
+    </view>
+    <text>上映日期：{{movie.year}}</text>
+    <text style='color:red;font-size:34rpx;'>豆瓣评分：{{movie.rating.average}}</text>
+  </view>
+</view>
+<view>
+  
+<button type='primary' catchtap='toWatch' data-url='{{movie.videos}}'>点击观看</button>
+<text class='summary'>简介：{{movie.summary}}</text>
+</view>
